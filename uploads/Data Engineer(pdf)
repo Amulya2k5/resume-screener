@@ -1,0 +1,21 @@
+Abraham
+Summary :
+Data engineer with 5+ years building data pipelines, ETL workflows, and analytics platforms. Strong in Python, Spark, Airflow, relational and NoSQL databases, and cloud data services. 
+Technical Skills : 
+- Languages: Python, SQL, Scala (basic) 
+- ETL/Workflow: Apache Airflow, Luigi 
+- Big Data: Apache Spark, Hadoop (basic) 
+- Datastores: PostgreSQL, BigQuery, Redshift, MongoDB
+- Streaming: Kafka, Kinesis
+- Cloud: AWS (S3, EMR, Glue), GCP (BigQuery) 
+- Testing/CI: pytest, dbt (basic) 
+- Observability: Prometheus, logging stacks
+Experience :
+Data Engineer — AnalyticsWorks
+- Built scalable ETL pipelines in Python and Spark to process 100M+ records daily and loaded curated
+datasets into Redshift/BigQuery. 
+- Developed Airflow DAGs for orchestrating data workflows, added monitoring and alerting to catch
+failed runs. 
+- Implemented Kafka-based streaming ingestion and CDC pipelines for near real-time data updates. 
+- Designed data schemas, improved query performance, and reduced ETL runtime by 45%. 
+Keywords: python, spark, airflow, etl, bigquery, redshift, postgres, kafka, s3, hive, data pipeline, dbt

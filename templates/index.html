@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Screener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #fff;
+            max-width: 480px;
+            margin: 60px auto;
+            padding: 35px 40px 25px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px 0 rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background: #1890ff;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        h1 {
+            margin-bottom: 22px;
+            color: #3a75c3;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .credit {
+            margin-top: -6px;
+            margin-bottom: 18px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .error {
+            color: #d8000c;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .extracted-text-section {
+            text-align: left;
+            margin-top: 18px;
+            background: #f7faff;
+            padding: 16px;
+            border-radius: 7px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Resume Screener</h1>
+    <p class="credit">Developed by Amulya Talluri</p>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Upload a Resume (PDF or DOCX):</label>
+            <input type="file" name="resume" id="file" accept=".pdf,.docx" required>
+            <br><br>
+            <label for = "job_description">Job Description(comma-seperated keywords):</label>
+            <br>
+            <textarea name = "job_description" rows = "5" cols = "50"></textarea>
+            <br><br>
+            <input type="submit" value="Analyze">
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        {% if extracted_text %}
+            <div class="extracted-text-section">
+                <h2>Extracted Text :</h2>
+                <pre>{{ extracted_text }}</pre>
+            </div>
+        {% endif %}
+
+        {% if analysis_results %}
+            <h2>Analysis Result</h2>
+            <p>Match Score: {{ "%.2f" | format(analysis_results.match_score * 100) }}%</p>
+
+            <h3>Matched Skills:</h3>
+            <ul>
+                {% for skill in analysis_results.matched_skills %}
+                    <li>{{ skill.skill }} — score: {{ "%.2f" | format(skill.score) }}</li>
+                {% else %}
+                    <li>No matched skills</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Missing Skills:</h3>
+            <ul>
+                {% for skill in analysis_results.missing_skills %}
+                    <li>{{ skill.skill }} — score: {{ "%.2f" | format(skill.score) }}</li>
+                {% else %}
+                    <li>No missing skills</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+</body>
+</html>
