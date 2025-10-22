@@ -1,0 +1,50 @@
+Name : Amulya Talluri
+
+Summary :
+Backend Python engineer with 6+ years building scalable web services and APIs. Strong experience with Python, Flask, Django, REST, microservices, PostgreSQL, Docker, Kubernetes, and cloud deployments. 
+Proven track record of designing and optimizing systems for high concurrency and reliability.
+
+Technical Skills :
+- Languages: Python, SQL, JavaScript
+- Web Frameworks: Flask, Django, FastAPI
+- APIs: RESTful API design, OpenAPI/Swagger, GraphQL (basic)
+- Databases: PostgreSQL, MySQL, Redis
+- DevOps & Containers: Docker, Kubernetes, CI/CD (GitHub Actions, Jenkins)
+- Cloud: AWS (EC2, S3, RDS), basic GCP experience
+- Testing: pytest, unit/integration testing, mocking
+- Observability: Prometheus, Grafana, ELK (Elasticsearch, Logstash, Kibana)
+- Messaging & Queues: RabbitMQ, Celery
+- Other: Git, Linux, Nginx, load balancing, performance tuning
+
+Experience :
+Senior Backend Engineer — Acme Tech (Remote)
+Jan 2021 — Present
+- Designed and implemented RESTful APIs in Flask and FastAPI for core customer services, improving response time by 40%.
+- Built microservices with Docker and Kubernetes, deployed to AWS EKS; used Helm charts for reproducible deploys.
+- Implemented background task processing with Celery and RabbitMQ to handle asynchronous workloads.
+- Migrated monolithic service to microservices architecture, decoupling components and enabling independent scaling.
+- Optimized PostgreSQL queries and added indexes, reducing slow queries by 60%.
+- Wrote integration tests and unit tests using pytest; introduced CI pipelines with GitHub Actions to run tests and linting on every PR.
+Backend Engineer — BrightApps
+Aug 2018 — Dec 2020
+- Developed REST APIs using Django REST Framework and Flask for customer-facing applications.
+- Implemented authentication and authorization (JWT, OAuth2) for secure API access.
+- Containerized applications using Docker; collaborated with DevOps to deploy via Kubernetes.
+- Led database schema design and performance tuning for PostgreSQL and Redis caching strategies.
+- Automated deployments and rollbacks using CI/CD pipelines and infrastructure-as-code practices.
+Software Engineer — TechStart
+Jun 2016 — Jul 2018
+- Built backend services and API endpoints in Python and Flask, integrated with PostgreSQL.
+- Wrote unit and integration tests, improved code coverage.
+- Implemented logging and centralized error reporting with ELK stack.
+
+Education :
+B.Tech in Computer Science — SNIST, 2022
+
+Certifications :
+- AWS Certified Developer – Associate (preferred)
+- Kubernetes Fundamentals / CKA (optional)
+
+Projects :
+- High-throughput API Gateway: Designed an API gateway in Flask that routes and rate-limits requests, integrates with Redis for rate counters, and performs authentication via JWT.
+- Background Job Pipeline: Built a Celery-based job pipeline to process file uploads, transform data, and write results to PostgreSQL and S3.
